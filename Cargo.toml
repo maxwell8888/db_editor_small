@@ -1,0 +1,74 @@
+[package]
+name = "db_editor_small"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# itertools = "0.10.2"
+clap = { version = "3.1.12", features = ["derive"] }
+csv = "1"
+# qif_parser = "0.2.0"
+# qif_parser = { git = "https://github.com/rust-lang/regex", branch = "next" }
+qif_parser = { git = "https://github.com/maxwell8888/rust-qif-parser" }
+pulldown-cmark = "0.9.1"
+sqlparser = "0.15.0"
+open = "2.1.1"
+# time = "0.3.7"
+chrono = { version = "0.4.0", features = ["serde"] }
+serde = "1.0.0"
+serde_json = "1.0"
+bincode = "1.3.3"
+rkyv = "0.7.35"
+bytecheck = "0.6.7"
+rodio = "0.15.0"
+# iced = { version = "0.3", default-features = false, features = ["wgpu", "image", "svg", "canvas", "qr_code", "smol"] } 
+iced_native = "0.5.0"
+iced = { version = "0.4.2", features = ["async-std", "debug", "default_system_font", "pure", "canvas", "palette"] }
+# iced = { git = "https://github.com/iced-rs/iced.git", features = ["async-std", "debug", "default_system_font", "pure", "canvas", "palette"] }
+palette = "0.6.0"
+
+druid = { git = "https://github.com/linebender/druid", features = ["im"] }
+
+# druid = { git = "https://github.com/linebender/druid", rev = "fc05e965c85fced8720c655685e02478e0530e94", features = ["im"] }
+# druid-widget-nursery = { git = "https://github.com/linebender/druid-widget-nursery" }
+druid-widget-nursery = { git = "https://github.com/maxwell8888/druid-widget-nursery" }
+# druid = "0.7.0"
+# druid-widget-nursery = { git = "https://github.com/linebender/druid-widget-nursery" }
+
+# [patch.'https://github.com/linebender/druid'.druid]
+# git = "https://github.com/linebender/druid"
+# rev = "fc05e965c85fced8720c655685e02478e0530e94"
+tracing = { version = "0.1.22" }
+# tracing-subscriber = { version = "0.3.2", features = ["fmt", "ansi"], default-features = false }
+# instant = { version = "0.1.6", features = ["wasm-bindgen"] }
+instant = { version = "0.1.6" }
+
+rusqlite = { git = "https://github.com/rusqlite/rusqlite.git", features = ["bundled", "chrono"] }
+log =  "0.4.16"
+uuid = { version = "1.0.0", features = ["serde", "v4"] }
+
+# iced = { git = "https://github.com/iced-rs/iced", default-features = false, features = ["wgpu", "image", "svg", "canvas", "qr_code"] } 
+# wasm-bindgen = "2.7.9"
+# iced = { git = "https://github.com/iced-rs/iced", branch = "master" } 
+# default_system_font = ["iced_wgpu/default_system_font"]
+
+# debug = ["iced_winit/debug"]
+# # Enables `tokio` as the `executor::Default` on native platforms
+# tokio = ["iced_futures/tokio"]
+# # Enables `async-std` as the `executor::Default` on native platforms
+# async-std = ["iced_futures/async-std"]
+# # Enables `smol` as the `executor::Default` on native platforms
+# smol = ["iced_futures/smol"]
+# # Enables advanced color conversion via `palette`
+# palette = ["iced_core/palette"]
+
+
+# [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# async-std = "1.0"
+# directories-next = "2.0"
+
+# [target.'cfg(target_arch = "wasm32")'.dependencies]
+# web-sys = { version = "0.3", features = ["Window", "Storage"] }
+# wasm-timer = "0.2"

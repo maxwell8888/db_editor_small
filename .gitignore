@@ -1,0 +1,5 @@
+/target
+# /rust-qif-parser
+/data
+cratesio.db
+cratesio_archive1.db
